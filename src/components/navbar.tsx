@@ -21,10 +21,10 @@ export default function NavbarHeader() {
         <h1 className="text-2xl font-bold p-4">NordicFurniture</h1>
       </NavbarBrand>
       <NavbarContent justify="center">
-        <NavbarItem className="p-4">Home</NavbarItem>
+        <NavbarItem className="p-4 font-bold">Home</NavbarItem>
         <Dropdown>
           <DropdownTrigger>
-            <NavbarItem className="p-4">Categories</NavbarItem>
+            <NavbarItem className="p-4 font-bold">Categories </NavbarItem>
           </DropdownTrigger>
           <DropdownMenu>
             <DropdownItem>Living Room</DropdownItem>
@@ -32,7 +32,7 @@ export default function NavbarHeader() {
             <DropdownItem>Outdoor</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <NavbarItem className="p-4">Dashboard</NavbarItem>
+        <NavbarItem className="p-4 font-bold">Dashboard</NavbarItem>
         <Input
           className="w-56"
           placeholder="Search for a product"
@@ -46,12 +46,12 @@ export default function NavbarHeader() {
         />
       </NavbarContent>
       <NavbarContent justify="end">
-        <Button className="p-4 bg-black rounded-full text-white">
+        {/* <Button radius="full" className="p-4 bg-black rounded-full text-white">
           <HiShoppingBag size="22" />
           Bag
-        </Button>
+        </Button> */}
 
-        <Button className="p-4 bg-black text-white rounded-full w-32">
+        <Button radius="full" className="p-4 bg-black text-white">
           <HiUser size="22" />
           Log in
         </Button>
