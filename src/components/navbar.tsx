@@ -11,6 +11,7 @@ import {
   Button,
   Input,
 } from "@nextui-org/react";
+import Link from "next/link";
 
 import { HiMagnifyingGlass, HiShoppingBag, HiUser } from "react-icons/hi2";
 
@@ -27,8 +28,12 @@ export default function NavbarHeader() {
             <NavbarItem className="p-4 font-bold">Categories </NavbarItem>
           </DropdownTrigger>
           <DropdownMenu>
-            <DropdownItem>Living Room</DropdownItem>
-            <DropdownItem>Bathroom</DropdownItem>
+            <DropdownItem>
+              <Link href="/furniture/living-room">Living Room</Link>
+            </DropdownItem>
+            <DropdownItem>
+              <Link href="/furniture/bathroom">Bathroom</Link>
+            </DropdownItem>
             <DropdownItem>Outdoor</DropdownItem>
           </DropdownMenu>
         </Dropdown>

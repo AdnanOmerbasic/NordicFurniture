@@ -32,10 +32,9 @@ model Session {
   updatedAt    DateTime @updatedAt
 }
 
-mode Category {
+model Category {
   id           String @id @default(cuid())
   slug         String @unique
-  product      Product[]
 
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt 
@@ -47,9 +46,8 @@ model Product {
   imagePath    String
   price        Int
   description  String
+  categorySlug String
 
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
-
-  category     Category @relation(fields: [categoryId], references: [id])
 }
