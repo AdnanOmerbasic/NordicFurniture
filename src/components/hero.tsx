@@ -1,5 +1,6 @@
 import { Image, Button, Divider } from "@nextui-org/react";
 import NextImage from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -24,7 +25,9 @@ export default function Hero() {
         <br></br>
         <h2 className="font-bold text-2xl">Premium Quality</h2>
         <Divider></Divider>
-        <Button className="bg-black text-white w-32 mt-10">Collection</Button>
+        <Button className="bg-black text-white w-32 mt-10">
+          <Link href="/furniture/products">Collection</Link>
+        </Button>
       </div>
     </section>
   );

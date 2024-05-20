@@ -1,16 +1,18 @@
-import type { Product } from "@prisma/client";
 import { db } from "@/db";
+import type { Product } from "@prisma/client";
 
-export type ProductCategory = Product & {
-  categorySlug: string;
-};
-
-export type AllProducts = Product & {};
-
-export function fetchProductByCategory(
-  slug: string
-): Promise<ProductCategory[]> {
+export function fetchProductByCategory(slug: string): Promise<Product[]> {
   return db.product.findMany({
     where: { categorySlug: slug },
+  });
+}
+
+export function fetchAllProducts(): Promise<Product[]> {
+  return db.product.findMany({
+    orderBy: [
+      {
+        createdAt: "desc",
+      },
+    ],
   });
 }

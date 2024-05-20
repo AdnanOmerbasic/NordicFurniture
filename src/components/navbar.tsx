@@ -19,10 +19,14 @@ export default function NavbarHeader() {
   return (
     <Navbar position="static" maxWidth={"2xl"}>
       <NavbarBrand>
-        <h1 className="text-2xl font-bold p-4">NordicFurniture</h1>
+        <h1 className="text-2xl font-bold p-4">
+          <Link href="/">NordicFurniture</Link>
+        </h1>
       </NavbarBrand>
       <NavbarContent justify="center">
-        <NavbarItem className="p-4 font-bold">Home</NavbarItem>
+        <NavbarItem className="p-4 font-bold">
+          <Link href="/">Home</Link>
+        </NavbarItem>
         <Dropdown>
           <DropdownTrigger>
             <NavbarItem className="p-4 font-bold">Categories </NavbarItem>

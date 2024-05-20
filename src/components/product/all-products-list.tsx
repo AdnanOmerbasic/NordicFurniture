@@ -3,18 +3,18 @@ import { Image, Card, CardBody, CardFooter } from "@nextui-org/react";
 import Link from "next/link";
 import NextImage from "next/image";
 
-interface ProductListByCategoryProps {
+interface AllProductsListProps {
   fetchData: () => Promise<Product[]>;
 }
 
-export default async function ProductListByCategory({
+export default async function AllProductsList({
   fetchData,
-}: ProductListByCategoryProps) {
-  const productsByCategory = await fetchData();
+}: AllProductsListProps) {
+  const allProducts = await fetchData();
 
   return (
     <div className="gap-8 grid grid-cols-2 sm:grid-cols-5">
-      {productsByCategory.map((product) => (
+      {allProducts.map((product) => (
         <Card key={product.id} className="flex justify-center items-center">
           <CardBody className="text-xl font-bold flex justify-center items-center">
             <Image
