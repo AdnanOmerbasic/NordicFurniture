@@ -39,6 +39,7 @@ export default function NavbarHeader() {
               <Link href="/furniture/bathroom">Bathroom</Link>
             </DropdownItem>
             <DropdownItem>Outdoor</DropdownItem>
+            <DropdownItem>Bedroom</DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <NavbarItem className="p-4 font-bold">Dashboard</NavbarItem>

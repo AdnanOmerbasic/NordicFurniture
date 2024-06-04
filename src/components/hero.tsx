@@ -16,7 +16,6 @@ export default function Hero() {
           className="m-5 object-cover"
           sizes="500"
           radius="full"
-          layout="responsive"
           loading="lazy"
         />
       </div>

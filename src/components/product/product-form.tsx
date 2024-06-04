@@ -27,12 +27,11 @@ export default function AddProductForm({ slug }: AddProductFormProps) {
       <h1 className="flex justify-center items-center mt-12 font-bold text-2xl">
         Add Furniture
       </h1>
-      <Link href={`/dashboard/products`}>Go back {`<`}</Link>
       <div className="flex justify-center items-center mt-5">
         <form action={action} className="flex w-96 ml-5 flex-col gap-10 ">
           <Input
             isInvalid={!!formState.errors.name}
-            errorMessage={formState.errors.name?.join(". ")}
+            errorMessage={formState.errors.name?.join("and")}
             type="text"
             label="Name"
             name="name"

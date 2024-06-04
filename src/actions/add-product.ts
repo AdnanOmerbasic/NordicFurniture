@@ -52,18 +52,6 @@ export async function addProduct(
     };
   }
 
-  // const category = await db.category.findFirst({
-  //   where: { slug },
-  // });
-
-  // if (!category) {
-  //   return {
-  //     errors: {
-  //       _form: ["Cannot find topic"],
-  //     },
-  //   };
-  // }
-
   let product: Product;
   try {
     product = await db.product.create({
