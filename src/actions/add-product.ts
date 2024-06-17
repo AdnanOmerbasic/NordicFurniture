@@ -81,5 +81,6 @@ export async function addProduct(
 
   revalidatePath("/dashboard/products");
   revalidatePath(`/furniture/${slug}/`);
+  revalidatePath(`/furniture/products`);
   redirect("/dashboard/products");
 }

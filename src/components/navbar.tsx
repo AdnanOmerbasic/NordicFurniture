@@ -38,11 +38,17 @@ export default function NavbarHeader() {
             <DropdownItem>
               <Link href="/furniture/bathroom">Bathroom</Link>
             </DropdownItem>
-            <DropdownItem>Outdoor</DropdownItem>
-            <DropdownItem>Bedroom</DropdownItem>
+            <DropdownItem>
+              <Link href="/furniture/outdoor">Outdoor</Link>
+            </DropdownItem>
+            <DropdownItem>
+              <Link href="/furniture/bedroom">Bedroom</Link>
+            </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <NavbarItem className="p-4 font-bold">Dashboard</NavbarItem>
+        <NavbarItem className="p-4 font-bold">
+          <Link href="/dashboard">Dashboard</Link>
+        </NavbarItem>
         <Input
           className="w-56"
           placeholder="Search for a product"
