@@ -16,3 +16,13 @@ export function fetchAllProducts(): Promise<Product[]> {
     ],
   });
 }
+
+export function fetchProductsBySearchTerms(term: string): Promise<Product[]> {
+  return db.product.findMany({
+    where: {
+      name: {
+        contains: term,
+      },
+    },
+  });
+}

@@ -1,0 +1,27 @@
+"use client";
+
+import { Input } from "@nextui-org/react";
+import { useSearchParams } from "next/navigation";
+import { HiMagnifyingGlass } from "react-icons/hi2";
+import * as actions from "@/actions";
+
+export default function Search() {
+  const searchParams = useSearchParams();
+  return (
+    <form action={actions.search}>
+      <Input
+        className="w-56"
+        placeholder="Search for a product"
+        labelPlacement="outside"
+        radius="full"
+        startContent={
+          <span className="text-default-900 text-lg">
+            <HiMagnifyingGlass size="22" />
+          </span>
+        }
+        name="term"
+        defaultValue={searchParams.get("term") || ""}
+      />
+    </form>
+  );
+}

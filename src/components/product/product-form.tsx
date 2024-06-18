@@ -31,35 +31,35 @@ export default function AddProductForm({ slug }: AddProductFormProps) {
         <form action={action} className="flex w-96 ml-5 flex-col gap-10 ">
           <Input
             isInvalid={!!formState.errors.name}
-            errorMessage={formState.errors.name?.join("and")}
+            errorMessage={formState.errors.name?.join(". And ")}
             type="text"
             label="Name"
             name="name"
           />
           <Textarea
             isInvalid={!!formState.errors.description}
-            errorMessage={formState.errors.description?.join(". ")}
+            errorMessage={formState.errors.description?.join(". And  ")}
             label="Description"
             type="text"
             name="description"
           />
           <Input
             isInvalid={!!formState.errors.price}
-            errorMessage={formState.errors.price?.join(". ")}
+            errorMessage={formState.errors.price?.join(". And  ")}
             type="number"
             label="Price"
             name="price"
           />
           <Input
             isInvalid={!!formState.errors.imagePath}
-            errorMessage={formState.errors.imagePath?.join(". ")}
+            errorMessage={formState.errors.imagePath?.join(". And  ")}
             type="url"
             name="imagePath"
             label="Image Url"
           />
           <Select
             isInvalid={!!formState.errors.categorySlug}
-            errorMessage={formState.errors.categorySlug?.join(". ")}
+            errorMessage={formState.errors.categorySlug?.join(". And  ")}
             label="Category"
             name="categorySlug"
           >

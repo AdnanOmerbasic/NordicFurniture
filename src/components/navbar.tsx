@@ -14,6 +14,8 @@ import {
 import Link from "next/link";
 
 import { HiMagnifyingGlass, HiShoppingBag, HiUser } from "react-icons/hi2";
+import Search from "./search";
+import { Suspense } from "react";
 
 export default function NavbarHeader() {
   return (
@@ -49,17 +51,9 @@ export default function NavbarHeader() {
         <NavbarItem className="p-4 font-bold">
           <Link href="/dashboard">Dashboard</Link>
         </NavbarItem>
-        <Input
-          className="w-56"
-          placeholder="Search for a product"
-          labelPlacement="outside"
-          radius="full"
-          startContent={
-            <span className="text-default-900 text-lg">
-              <HiMagnifyingGlass size="22" />
-            </span>
-          }
-        />
+        <Suspense>
+          <Search />
+        </Suspense>
       </NavbarContent>
       <NavbarContent justify="end">
         {/* <Button radius="full" className="p-4 bg-black rounded-full text-white">
